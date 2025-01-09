@@ -104,57 +104,57 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 200px;
-    background-color: rgba(255, 247, 226, 1);
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgb(110, 106, 96);
-  }
-  h3 {
-    color: rgba(133, 12, 12, 1);
-    margin-bottom: 10px;
-  }
-  label {
-    color: rgba(133, 12, 12, 1);
-    background-color: rgba(255, 247, 226, 1);
-    border-radius: 10px;
-  }
-  .error {
-    color: rgba(133, 12, 12, 1);
-  }
-  input {
-    border: 2px solid #989898;
-    border-radius: 10px;
-    width: 200px;
-    height: 30px;
-    margin-bottom: 10px;
-  }
-  input::placeholder {
-    padding-left: 7px;
-  }
-  button {
-    border: none;
-    background-color: gray;
-    color: rgba(255, 247, 226, 1);
-    border-radius: 17px;
-    width: 200px;
-    height: 40px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: rgba(133, 12, 12, 1);
-  }
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  background-color: rgba(255, 247, 226, 1);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgb(110, 106, 96);
+}
+h3 {
+  color: rgba(133, 12, 12, 1);
+  margin-bottom: 10px;
+}
+label {
+  color: rgba(133, 12, 12, 1);
+  background-color: rgba(255, 247, 226, 1);
+  border-radius: 10px;
+}
+.error {
+  color: rgba(133, 12, 12, 1);
+}
+input {
+  border: 2px solid #989898;
+  border-radius: 10px;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+input::placeholder {
+  padding-left: 7px;
+}
+button {
+  border: none;
+  background-color: gray;
+  color: rgba(255, 247, 226, 1);
+  border-radius: 17px;
+  width: 200px;
+  height: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgba(133, 12, 12, 1);
+}
 
 </style>

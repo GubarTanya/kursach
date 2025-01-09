@@ -52,7 +52,7 @@ const validateForm = () => {
 
   if (!formData.email) {
     errors.email = 'Email обязателен';
-  } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+  } else if (formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) { //для поиска индеса первого вхождения
     errors.email = 'Неверный формат email';
   }
 
@@ -76,21 +76,21 @@ const handleSubmit = async () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
+      body: JSON.stringify({ // преобраз объект в строку
         email: formData.email,
         password: formData.password,
-        returnSecureToken: true
+        returnSecureToken: true //запрос на возврат токена
       })
     });
 
-    const data = await response.json();
+    const data = await response.json(); //ожидание ассинхронной операции
 
     if (response.ok) {
       success.value = true;
-      localStorage.setItem('userUID', data.localId);
+      localStorage.setItem('userUID', data.localId); // сохранение данных в локальном хранилище
       await router.push('./login');
     } else {
-      if (data.error.message === 'EMAIL_EXISTS') {
+      if (data.error.message === 'EMAIL_EXISTS') { // сообщение об ошибке
         errors.email = 'Этот email уже зарегистрирован';
       } else {
         errors.email = 'Произошла ошибка при регистрации';
